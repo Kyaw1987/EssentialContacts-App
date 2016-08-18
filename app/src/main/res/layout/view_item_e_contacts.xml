@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.freelance.android.practiceEC.views.ViewItemEssential
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:recycler_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/image_size"
+    android:layout_marginTop="@dimen/margin_medium"
+    recycler_view:cardUseCompatPadding="true"
+    recycler_view:cardElevation="@dimen/card_elevation">
+
+    <RelativeLayout
+        android:id="@+id/rlview_list_essential"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:clickable="false">
+
+        <ImageView
+            android:id="@+id/iv_stock_photo"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/empty_photo"
+            android:layout_margin="@dimen/margin_small"/>
+
+        <TextView
+            android:id="@+id/tv_event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_stock_photo"
+            android:fontFamily="Roboto"
+            android:text="Yangon General Hospital"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:layout_margin="@dimen/margin_small"/>
+
+        <TextView
+            android:id="@+id/tv_event_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_event_title"
+            android:layout_toRightOf="@id/iv_stock_photo"
+            android:ellipsize="end"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:lineSpacingMultiplier="1.2"
+            android:maxLines="4"
+            android:text="The Yangon General Hospital was established in 1899 as the Rangoon General Hospital (RGH) with a capacity of 342 beds during the British colonial era. The 3-story Victorian-style main building was opened on 6 May 1905. After World War II, the hospital underwent renovations and had a capacity of 546 beds. In 1964, new specialist wards were added, and the capacity was increased to 1500 beds. The building was a major massacre site during the 8888 Uprising, in which injured patients, assumed to have taken part in the anti-government protests, were killed by the Tatmadaw. he hospital is closed to tourists. The hospital was also the site of Aung San Suu Kyi's first public speech, on 24 August 1988. Today the building is listed on the Yangon City Heritage List."
+            android:textAppearance="?android:textAppearanceSmall"
+            android:layout_margin="@dimen/margin_small"/>
+
+
+    </RelativeLayout>
+</com.freelance.android.practiceEC.views.ViewItemEssential>

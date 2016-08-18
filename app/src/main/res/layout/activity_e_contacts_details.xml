@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/egg_shell">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <ImageView
+            android:id="@+id/iv_stock_photo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="59"
+            android:scaleType="centerCrop"
+            android:src="@drawable/empty_photo"
+            android:transitionName="image" />
+
+        <LinearLayout
+            android:id="@+id/ll_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimary"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/standard_margin"
+            android:paddingLeft="@dimen/keyline2"
+            android:paddingRight="@dimen/keyline3"
+            android:paddingTop="@dimen/standard_margin">
+
+            <TextView
+                android:id="@+id/tv_event_title"
+                style="@style/TextAppearance.AppCompat.Title.Inverse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/standard_margin"
+            android:paddingTop="@dimen/standard_margin"
+            android:scrollbarStyle="outsideOverlay">
+
+            <TextView
+                android:id="@+id/tv_event_desc"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/keyline2"
+                android:paddingRight="@dimen/keyline3"
+                android:textIsSelectable="true"
+                android:onClick="speakText"
+                android:longClickable="true"/>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium4"
+                android:scaleType="center"
+                android:src="@drawable/ic_place_black_18dp" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium2"
+                android:text="Bogyoke Aung San Road." />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium4"
+                android:scaleType="center"
+                android:src="@drawable/ic_call_black_18dp" />
+
+            <TextView
+                android:id="@+id/tv_phone_no"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium2"
+                android:text="+95-01-384493" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/vp_fabs"
+        layout="@layout/view_pod_fabs"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+</android.support.design.widget.CoordinatorLayout>
